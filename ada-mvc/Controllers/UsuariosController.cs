@@ -50,6 +50,9 @@ namespace ada_mvc.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Realizamos la encriptación de la contraseña.
+                usuarios.Password = Encriptation.GetSHA256(usuarios.Password);
+                //Procedemos a guardar el usuario.
                 db.Usuarios.Add(usuarios);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -82,6 +85,9 @@ namespace ada_mvc.Controllers
         {
             if (ModelState.IsValid)
             {
+                //Realizamos la encriptación de la contraseña.
+                usuarios.Password = Encriptation.GetSHA256(usuarios.Password);
+                //Procedemos a actualizar usuario.
                 db.Entry(usuarios).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
