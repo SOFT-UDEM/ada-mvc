@@ -142,6 +142,7 @@
     <Compile Include="Empleados.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Encriptation.cs" />
     <Compile Include="EquiposTecnologicos.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
