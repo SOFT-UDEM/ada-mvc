@@ -61,6 +61,7 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                <label id="labelMessage" style="margin-top: 1rem;" class="btn-danger">La contraseña debe tener minimo 8 carácteres</label>
             </div>
         </div>
 
@@ -78,6 +79,33 @@
             </div>
         </div>
     </div>
+    <script>
+        var pass = document.querySelector("#Password");
+        function validatePassword() {
+            var p = document.getElementById("Password").value;
+            var errors = [];
+            if (p.length < 8) {
+                errors.push("Tu password debe tener al menos 8 caracteres");
+            }
+            if (p.search(/[A-Z]/) < 0) {
+                errors.push("Tu password debe contener mayusculas");
+            }
+            if (p.search(/[a-z]/) < 0) {
+                errors.push("Tu password debe contener minusculas");
+            }
+            if (p.search(/[0-9]/) < 0) {
+                errors.push("Tu password debe contener al menos 1 digito");
+            }
+            if (errors.length > 0) {
+                alert(errors.join("\n"));
+                return false;
+            }
+            return true;
+        }
+        pass.addEventListener("change", () => {
+            validatePassword();
+        })
+    </script>
 }
 
 <div>
