@@ -3,6 +3,6 @@ Este es un proyecto para la clase de G.P.S
 
 Integrantes:
 
-Haryeri Sánchez.
-Marvin Fergunson.
-Carlos Quintero.
+1. Haryeri Sánchez.
+2. Marvin Fergunson.
+3. Carlos Quintero.
