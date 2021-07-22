@@ -1,6 +1,6 @@
 /*
 			****** Script Base de datos ********
-	**** Análisis y diseño de sistemas orientado a objetos ****
+	**** GestiÃ³n de Proyectos de Software ****
 */
 
 USE master
@@ -41,7 +41,7 @@ EXEC sp_addrolemember 'db_owner', 'userbdsoft'
 GO
 
 /*
-	Creación de tablas.
+	Creaciï¿½n de tablas.
 */
 
 -- Tabla LogTablas
@@ -130,7 +130,7 @@ GO
 -- Fin tabla DetalleDeAsistencias.
 
 /*
-	Creación de restricciones.
+	Creaciï¿½n de restricciones.
 */
 
 -- Clave primaria de tabla LogTablas
@@ -138,7 +138,7 @@ ALTER TABLE LogTablas ADD CONSTRAINT pk_logtablas_IdLog
 PRIMARY KEY NONCLUSTERED(IdLog)
 GO
 
--- Creando restricción para campo Accion (Solo permite INSERT, DELETE, UPDATE)
+-- Creando restricciï¿½n para campo Accion (Solo permite INSERT, DELETE, UPDATE)
 ALTER TABLE LogTablas ADD CONSTRAINT ck_logtablas_Accion 
 CHECK(Accion in ('INSERT', 'DELETE', 'UPDATE'))
 GO
@@ -197,12 +197,12 @@ FOREIGN KEY(IdAsistencia) REFERENCES Asistencias(IdAsistencia) ON UPDATE CASCADE
 GO
 
 /*
-	Creación de consultas.
+	Creaciï¿½n de consultas.
 */
--- Mostrar todas las áreas y organizarlas en orden a - z.
+-- Mostrar todas las ï¿½reas y organizarlas en orden a - z.
 SELECT IdArea, Nombre, Funcion, Observacion FROM Areas ORDER BY Nombre
 GO
--- Mostrar lista de empleados y organizarlas por áreas en orden a - z
+-- Mostrar lista de empleados y organizarlas por ï¿½reas en orden a - z
 SELECT t1.CodEmpleado, t1.Nombre, t1.Apellido, t1.Identificacion, t1.Cargo, t2.Nombre as Area, t1.Observacion
 FROM Empleados as t1
 INNER JOIN Areas as t2
@@ -218,7 +218,7 @@ INNER JOIN Usuarios AS t3
 ON t1.CreadoPorUserName = t3.IdUsuario
 ORDER BY t1.Descripcion
 GO
--- Mostrar lista de todos los equipos que estan registrados en un area específico.
+-- Mostrar lista de todos los equipos que estan registrados en un area especï¿½fico.
 DECLARE @area int = 1
 SELECT t1.IdEquipo, t4.Nombre AS Area ,t1.Descripcion, t1.Modelo, t1.Marca, t1.NumeroDeSerie, t1.CodigoInterno, t1.Estado, t2.Nombre + ' ' + t2.Apellido AS Empleado, t1.ValorMonetario, t3.UserName AS Usuario, t1.Observacion 
 FROM EquiposTecnologicos AS t1
