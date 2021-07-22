@@ -9,7 +9,7 @@
         display: none;
     }
 </style>
-<h2>Create</h2>
+<h2>Crear nuevo usuario</h2>
 
 
 @using (Html.BeginForm()) 
@@ -79,7 +79,7 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input id="save" type="submit" value="Create" class="ocultar" />
+                <input id="save" type="submit" value="Crear" class="ocultar" />
             </div>
         </div>
     </div>
@@ -132,8 +132,8 @@
     </script>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="btn btn-default">
+    @Html.ActionLink("Regresar", "Index")
 </div>
 
 @section Scripts {
