@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Detalle de usuario</h2>
 
 <div>
-    <h4>Usuarios</h4>
+    @*<h4>Usuarios</h4>*@
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -68,6 +68,10 @@
         </dd>
 
     </dl>
+    <script>
+        var password = document.getElementById("Password");
+        password.setAttribute("type", "password");
+    </script>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.IdUsuario }) |

@@ -4,8 +4,12 @@
     ViewBag.Title = "Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Edit</h2>
+<style>
+    .ocultar {
+        display: none;
+    }
+</style>
+<h2>Editar usuarios</h2>
 
 
 @using (Html.BeginForm())
@@ -13,7 +17,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Usuarios</h4>
+        @*<h4>Usuarios</h4>*@
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.IdUsuario)
@@ -60,9 +64,10 @@
 
         <div class="form-group">
             @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
+            <div style="display: flex; justify-content: flex-start; gap: 10px;" class="col-md-10">
                 @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                <label id="labelMessage" style="padding: 0px 1rem; margin-top: 1rem;" class="btn-default">Mínimo 8 carácteres de longitud, debe contener mayúsculas y minúsculas</label>
             </div>
         </div>
 
@@ -76,14 +81,61 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-default" />
+                <input id="save" type="submit" value="Guardar" class="ocultar" />
             </div>
         </div>
     </div>
+    <script>
+        let password = document.getElementById("Password");
+        let labelMessage = document.getElementById("labelMessage");
+        let button = document.getElementById("save");
+        password.setAttribute("type", "password");
+
+        function validatePassword() {
+            var errors = [];
+            if (password.value.length < 8) {
+                labelMessage.innerHTML = "Debe ser mayor a 8 carácteres,";
+                labelMessage.setAttribute("class", "btn-danger");
+                errors.push(labelMessage.textContent);
+            }
+            if (password.value.search(/[A-Z]/) < 0) {
+                labelMessage.innerHTML = "Debe contener mayúsculas,";
+                labelMessage.setAttribute("class", "btn-danger");
+                password.focus();
+                errors.push(labelMessage.textContent);
+            }
+            if (password.value.search(/[a-z]/) < 0) {
+                labelMessage.innerHTML = "Debe contener minúsculas,";
+                labelMessage.setAttribute("class", "btn-danger");
+                password.focus();
+                errors.push(labelMessage.textContent);
+            }
+            if (password.value.search(/[0-9]/) < 0) {
+                labelMessage.innerHTML = "Debe contener al menos 1 digito,";
+                labelMessage.setAttribute("class", "btn-danger");
+                password.focus();
+                errors.push(labelMessage.textContent);
+            }
+            if (errors.length > 0) {
+                labelMessage.innerHTML = errors.join("\n");
+                labelMessage.setAttribute("class", "btn-danger");
+                button.setAttribute("class", "ocultar");
+                return false;
+            } else {
+                labelMessage.innerHTML = "Contraseña es segura";
+                labelMessage.setAttribute("class", "btn-success");
+                button.setAttribute("class", "btn btn-default");
+            }
+            return true;
+        }
+        password.addEventListener("change", () => {
+            validatePassword();
+        })
+    </script>
 }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+<div class="btn btn-default">
+    @Html.ActionLink("Regresar", "Index")
 </div>
 
 @section Scripts {

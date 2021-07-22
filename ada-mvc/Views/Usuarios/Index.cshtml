@@ -27,9 +27,6 @@
         <th>
             @Html.DisplayNameFor(model => model.UserName)
         </th>
-        @*<th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Observacion)
         </th>
@@ -53,15 +50,11 @@
         <td>
             @Html.DisplayFor(modelItem => item.UserName)
         </td>
-        @*<td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Observacion)
         </td>
         <td>
             @Html.ActionLink("Editar", "Edit", new { id=item.IdUsuario }) |
-            @Html.ActionLink("Visualizar", "Details", new { id=item.IdUsuario }) |
             @Html.ActionLink("Eliminar", "Delete", new { id=item.IdUsuario })
         </td>
     </tr>
