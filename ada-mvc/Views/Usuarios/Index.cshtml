@@ -5,10 +5,10 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Administración de usuarios</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p style="margin-bottom: 1rem;" class="btn btn-default">
+    @Html.ActionLink("Crear nuevo", "Create")
 </p>
 <table class="table">
     <tr>
@@ -27,9 +27,9 @@
         <th>
             @Html.DisplayNameFor(model => model.UserName)
         </th>
-        <th>
+        @*<th>
             @Html.DisplayNameFor(model => model.Password)
-        </th>
+        </th>*@
         <th>
             @Html.DisplayNameFor(model => model.Observacion)
         </th>
@@ -53,16 +53,16 @@
         <td>
             @Html.DisplayFor(modelItem => item.UserName)
         </td>
-        <td>
+        @*<td>
             @Html.DisplayFor(modelItem => item.Password)
-        </td>
+        </td>*@
         <td>
             @Html.DisplayFor(modelItem => item.Observacion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdUsuario }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdUsuario }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdUsuario })
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdUsuario }) |
+            @Html.ActionLink("Visualizar", "Details", new { id=item.IdUsuario }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IdUsuario })
         </td>
     </tr>
 }
