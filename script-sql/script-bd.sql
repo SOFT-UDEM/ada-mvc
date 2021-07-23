@@ -18,7 +18,7 @@ GO
 CREATE DATABASE bdsoft
 GO
 
---Crear y asignar usuarios.
+--Comprobar si existe el usuario userbdsoft.
 IF EXISTS(SELECT name FROM master.dbo.syslogins WHERE name='userbdsoft')
 BEGIN
 	DROP LOGIN userbdsoft
