@@ -1,0 +1,51 @@
+﻿@model ada_mvc.DetalleDeAsistencias
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DetalleDeAsistencias</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaHoraEntrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaHoraEntrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaHoraSalida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaHoraSalida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Asistencias.IdAsistencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Asistencias.IdAsistencia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdDetalle }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

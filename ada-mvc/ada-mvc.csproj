@@ -136,6 +136,8 @@
     </Compile>
     <Compile Include="Controllers\AccesoLoginController.cs" />
     <Compile Include="Controllers\AreasController.cs" />
+    <Compile Include="Controllers\AsistenciasController.cs" />
+    <Compile Include="Controllers\DetalleDeAsistenciasController.cs" />
     <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\EquiposTecnologicosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -270,6 +272,16 @@
     <Content Include="Views\EquiposTecnologicos\Details.cshtml" />
     <Content Include="Views\EquiposTecnologicos\Edit.cshtml" />
     <Content Include="Views\EquiposTecnologicos\Index.cshtml" />
+    <Content Include="Views\Asistencias\Create.cshtml" />
+    <Content Include="Views\Asistencias\Delete.cshtml" />
+    <Content Include="Views\Asistencias\Details.cshtml" />
+    <Content Include="Views\Asistencias\Edit.cshtml" />
+    <Content Include="Views\Asistencias\Index.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Create.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Delete.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Details.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Edit.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
