@@ -1,0 +1,99 @@
+﻿@model ada_mvc.EquiposTecnologicos
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EquiposTecnologicos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Modelo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Marca)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Marca)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroDeSerie)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroDeSerie)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodigoInterno)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodigoInterno)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ValorMonetario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ValorMonetario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Empleados.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Empleados.Nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios.Nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Usuarios.Nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdEquipo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

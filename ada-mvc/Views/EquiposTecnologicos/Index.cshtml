@@ -1,0 +1,88 @@
+﻿@model IEnumerable<ada_mvc.EquiposTecnologicos>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modelo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Marca)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroDeSerie)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodigoInterno)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Estado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ValorMonetario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Empleados.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Usuarios.Nombre)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modelo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Marca)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDeSerie)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodigoInterno)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Estado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ValorMonetario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Empleados.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuarios.Nombre)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdEquipo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdEquipo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdEquipo })
+        </td>
+    </tr>
+}
+
+</table>
