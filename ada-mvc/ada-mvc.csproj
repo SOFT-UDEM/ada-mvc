@@ -136,6 +136,7 @@
     </Compile>
     <Compile Include="Controllers\AccesoLoginController.cs" />
     <Compile Include="Controllers\AreasController.cs" />
+    <Compile Include="Controllers\EmpleadosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="DetalleDeAsistencias.cs">
@@ -258,6 +259,11 @@
     <Content Include="Views\Areas\Details.cshtml" />
     <Content Include="Views\Areas\Edit.cshtml" />
     <Content Include="Views\Areas\Index.cshtml" />
+    <Content Include="Views\Empleados\Create.cshtml" />
+    <Content Include="Views\Empleados\Delete.cshtml" />
+    <Content Include="Views\Empleados\Details.cshtml" />
+    <Content Include="Views\Empleados\Edit.cshtml" />
+    <Content Include="Views\Empleados\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
