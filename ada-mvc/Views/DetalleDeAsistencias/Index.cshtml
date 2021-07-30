@@ -5,11 +5,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Agregar detalle de asistencias de empleados</h2>
+<style>
+    .mybtn {
+        border: 1px solid #F06D7E;
+        margin-bottom: 1rem;
+    }
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+        .mybtn > a {
+            color: #F06D7E;
+        }
+</style>
+<div class="btn mybtn">
+    @Html.ActionLink("Crear nueva", "Create")
+</div>
 <table class="table">
     <tr>
         <th>
@@ -42,9 +51,9 @@
             @Html.DisplayFor(modelItem => item.Asistencias.IdAsistencia)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdDetalle }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdDetalle }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdDetalle })
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdDetalle }) |
+            @Html.ActionLink("Ver", "Details", new { id=item.IdDetalle }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IdDetalle })
         </td>
     </tr>
 }
