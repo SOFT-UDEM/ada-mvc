@@ -7,12 +7,22 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
+<style>
+    body {
+        background-image: url('../../images/circle.svg'), url('../../images/hero.svg');
+        background-color: #161A23;
+        background-size: cover, 40%;
+        background-repeat: repeat, no-repeat;
+        background-position-y: bottom, center;
+        background-position-x: center, right;
+    }
+</style>
 <body>
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Gestión de Proyectos de Software</p>
+            <p style="color: white;">&copy; @DateTime.Now.Year - Gestión de Proyectos de Software</p>
         </footer>
     </div>
 

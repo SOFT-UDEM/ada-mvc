@@ -7,8 +7,16 @@
     .label-default {
         background-color: transparent;
     }
+    .mybtn {
+        border: 1px solid #F06D7E;
+        margin-bottom: 1rem;
+    }
+
+        .mybtn > a {
+            color: #F06D7E;
+        } 
 </style>
-<h2>Inicio de sesión</h2>
+<h2 style="color: white;">Inicio de sesión</h2>
 
 <div class="row">
 
@@ -18,11 +26,11 @@
 
     <form class="formLogin" action="@Url.Content("~/AccesoLogin/Login")" method="post">
         <div class="form-group">
-            <label class="label-default" for="email">Usuario</label>
+            <label style="color: white;" class="label-default" for="email">Usuario</label>
             <input class="form-control" type="text" name="user" placeholder="Ingresa su Correo" />
         </div>
         <div class="form-group">
-            <label class="label-default" for="pass">Contraseña</label>
+            <label style="color: white;" class="label-default" for="pass">Contraseña</label>
             <input class="form-control" type="password" name="pass" placeholder="Ingresa su contraseña" />
         </div>
         <div class="form-group">
