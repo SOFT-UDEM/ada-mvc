@@ -8,6 +8,13 @@
     .ocultar {
         display: none;
     }
+    .mybtn {
+        border: 1px solid #F06D7E;
+        margin-bottom: 1rem;
+    }
+    .mybtn > a {
+        color: #F06D7E;
+    } 
 </style>
 <h2>Crear nuevo usuario</h2>
 
@@ -132,8 +139,10 @@
     </script>
 }
 
-<div class="btn btn-default">
-    @Html.ActionLink("Regresar", "Index")
+<div class="btn mybtn">
+    <a>
+        @Html.ActionLink("Regresar", "Index")
+    </a>
 </div>
 
 @section Scripts {

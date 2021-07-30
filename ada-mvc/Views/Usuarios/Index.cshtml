@@ -2,14 +2,25 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutViews.cshtml";
 }
+<style>
+    .mybtn {
+        border: 1px solid #F06D7E;
+        margin-bottom: 1rem;
+    }
+        .mybtn > a {
+            color: #F06D7E;
+        } 
 
+</style>
 <h2>Administración de usuarios</h2>
 
-<p style="margin-bottom: 1rem;" class="btn btn-default">
+<div class="btn mybtn">
+    <a>
     @Html.ActionLink("Crear nuevo", "Create")
-</p>
+    </a>
+</div>
 <table class="table">
     <tr>
         <th>

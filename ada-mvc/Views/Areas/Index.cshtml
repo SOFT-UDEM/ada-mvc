@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ada_mvc.Areas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutViews.cshtml";
+}
+<style>
+    .mybtn {
+        border: 1px solid #F06D7E;
+        margin-bottom: 1rem;
+    }
+
+        .mybtn > a {
+            color: #F06D7E;
+        }
+</style>
+<h2>Crear áreas</h2>
+
+<div class="btn mybtn">
+    <a>
+        @Html.ActionLink("Crear nuevo", "Create")
+    </a>
+</div>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Funcion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Funcion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Observacion)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdArea }) |
+            @Html.ActionLink("Ver", "Details", new { id=item.IdArea }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IdArea })
+        </td>
+    </tr>
+}
+
+</table>

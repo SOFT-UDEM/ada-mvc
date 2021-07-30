@@ -135,6 +135,11 @@
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\AccesoLoginController.cs" />
+    <Compile Include="Controllers\AreasController.cs" />
+    <Compile Include="Controllers\AsistenciasController.cs" />
+    <Compile Include="Controllers\DetalleDeAsistenciasController.cs" />
+    <Compile Include="Controllers\EmpleadosController.cs" />
+    <Compile Include="Controllers\EquiposTecnologicosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="DetalleDeAsistencias.cs">
@@ -201,6 +206,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\circle.svg" />
+    <Content Include="images\hero.svg" />
     <Content Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
@@ -252,6 +259,32 @@
     <Content Include="Views\Usuarios\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutLogin.cshtml" />
     <Content Include="Views\AccesoLogin\Login.cshtml" />
+    <Content Include="Views\Areas\Create.cshtml" />
+    <Content Include="Views\Areas\Delete.cshtml" />
+    <Content Include="Views\Areas\Details.cshtml" />
+    <Content Include="Views\Areas\Edit.cshtml" />
+    <Content Include="Views\Areas\Index.cshtml" />
+    <Content Include="Views\Empleados\Create.cshtml" />
+    <Content Include="Views\Empleados\Delete.cshtml" />
+    <Content Include="Views\Empleados\Details.cshtml" />
+    <Content Include="Views\Empleados\Edit.cshtml" />
+    <Content Include="Views\Empleados\Index.cshtml" />
+    <Content Include="Views\EquiposTecnologicos\Create.cshtml" />
+    <Content Include="Views\EquiposTecnologicos\Delete.cshtml" />
+    <Content Include="Views\EquiposTecnologicos\Details.cshtml" />
+    <Content Include="Views\EquiposTecnologicos\Edit.cshtml" />
+    <Content Include="Views\EquiposTecnologicos\Index.cshtml" />
+    <Content Include="Views\Asistencias\Create.cshtml" />
+    <Content Include="Views\Asistencias\Delete.cshtml" />
+    <Content Include="Views\Asistencias\Details.cshtml" />
+    <Content Include="Views\Asistencias\Edit.cshtml" />
+    <Content Include="Views\Asistencias\Index.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Create.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Delete.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Details.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Edit.cshtml" />
+    <Content Include="Views\DetalleDeAsistencias\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutViews.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
