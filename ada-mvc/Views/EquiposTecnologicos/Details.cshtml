@@ -5,10 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Details</h2>
+<h2>Detalle de equipo</h2>
+<style>
+    .mybtn {
+        border: 1px solid #F06D7E;
+        margin-bottom: 1rem;
+    }
 
+        .mybtn > a {
+            color: #F06D7E;
+        }
+</style>
 <div>
-    <h4>EquiposTecnologicos</h4>
+    @*<h4>EquiposTecnologicos</h4>*@
     <hr />
     <dl class="dl-horizontal">
         <dt>
@@ -94,6 +103,14 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdEquipo }) |
-    @Html.ActionLink("Back to List", "Index")
+    <div class="btn mybtn">
+        <a>
+            @Html.ActionLink("Regresar", "Index")
+        </a>
+    </div>
+    <div class="btn mybtn">
+        <a>
+            @Html.ActionLink("Editar", "Edit", new { id = Model.IdEquipo })
+        </a>
+    </div>
 </p>
