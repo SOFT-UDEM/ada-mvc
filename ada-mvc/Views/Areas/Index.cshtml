@@ -2,14 +2,25 @@
 
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_LayoutViews.cshtml";
 }
+<style>
+    .mybtn {
+        border: 1px solid #F06D7E;
+        margin-bottom: 1rem;
+    }
 
-<h2>Index</h2>
+        .mybtn > a {
+            color: #F06D7E;
+        }
+</style>
+<h2>Crear áreas</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<div class="btn mybtn">
+    <a>
+        @Html.ActionLink("Crear nuevo", "Create")
+    </a>
+</div>
 <table class="table">
     <tr>
         <th>
@@ -36,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.Observacion)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdArea }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdArea }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdArea })
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdArea }) |
+            @Html.ActionLink("Ver", "Details", new { id=item.IdArea }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.IdArea })
         </td>
     </tr>
 }
